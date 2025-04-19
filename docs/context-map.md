@@ -1,14 +1,14 @@
 ```mermaid
 flowchart LR
     subgraph External
-        Weather[OpenWeatherMap<br/>(REST)]
-        Geo[OpenStreetMap Nominatim<br/>(REST)]
-        Stripe[Stripe<br/>(Webhook)]
-        Sensors[IoT Sensors<br/>(MQTT)]
-        Dashboard[Parking Dashboard<br/>(WebSocket)]
+        Weather["OpenWeatherMap<br/>(REST)"]
+        Geo["OpenStreetMap Nominatim<br/>(REST)"]
+        Stripe["Stripe<br/>(Webhook)"]
+        Sensors["IoT Sensors<br/>(MQTT)"]
+        Dashboard["Parking Dashboard<br/>(WebSocket)"]
     end
 
-    Garage[Smart Parking Garage<br/>(Core Bounded Context)]
+    Garage["Smart Parking Garage<br/>(Core Bounded Context)"]
 
     Weather -->|Forecast JSON| Garage
     Geo -->|Geo JSON| Garage
